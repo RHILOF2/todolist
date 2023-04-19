@@ -1,11 +1,16 @@
-import { MantineProvider, Text } from '@mantine/core';
-import { useReducer } from 'react';
+import { Center, Title, TextInput } from '@mantine/core';
+import Todo from './components/TodoList/Todo';
 
-function TodoList() {
+export default function TodoList() {
   return (
-    <>
-    <Title order={1}>TodoList</Title>
-    </>
+    <Center>
+      <Title order={1} >TODO</Title>
+
+      <TextInput
+        placeholder="Ma tâche à ajouter.."
+        inputWrapperOrder={['label', 'error', 'input', 'description']}
+      />
+      
+    </Center>
   );
 }
-export default TodoList;
